@@ -1,1 +1,64 @@
-<p>sidebar works!</p>
+<aside class="sidebar">
+
+  <div class="brand">
+    <div class="brand-icon">🌱</div>
+    <div>
+      <h2>AGROCAMPO</h2>
+      <span>Gestión agrícola</span>
+    </div>
+  </div>
+
+  <div class="menu-label">MENÚ PRINCIPAL</div>
+
+  <nav class="menu">
+
+    <a routerLink="/dashboard" routerLinkActive="active">
+      <span class="menu-icon">⌂</span>
+      <span>Dashboard</span>
+    </a>
+
+    <a routerLink="/cultivos" routerLinkActive="active">
+      <span class="menu-icon">🌿</span>
+      <span>Mis cultivos</span>
+    </a>
+
+    <a routerLink="/analizar" routerLinkActive="active">
+      <span class="menu-icon">📷</span>
+      <span>Analizar planta</span>
+    </a>
+
+    <a routerLink="/historial" routerLinkActive="active">
+      <span class="menu-icon">▤</span>
+      <span>Historial de diagnósticos</span>
+    </a>
+
+    <a routerLink="/biblioteca" routerLinkActive="active">
+      <span class="menu-icon">📚</span>
+      <span>Biblioteca de enfermedades</span>
+    </a>
+
+    <a routerLink="/alertas" routerLinkActive="active">
+      <span class="menu-icon">♧</span>
+      <span>Alertas</span>
+    </a>
+
+  </nav>
+
+  <div class="menu-label account-label">CUENTA</div>
+
+  <nav class="menu">
+    <a routerLink="/perfil" routerLinkActive="active">
+      <span class="menu-icon">👤</span>
+      <span>Perfil y configuración</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <div class="footer-icon">🌱</div>
+    <div>
+      <strong>AgroCampo</strong>
+      <small>Tu aliado agrícola</small>
+    </div>
+  </div>
+
+</aside>

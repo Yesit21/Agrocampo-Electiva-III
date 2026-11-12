@@ -1,1 +1,30 @@
-<p>header works!</p>
+<header class="header">
+
+  <div class="header-left">
+    <h2>Panel de administración</h2>
+    <p>Bienvenido a AgroCampo</p>
+  </div>
+
+  <div class="header-right">
+
+    <div class="search-box">
+      <span>⌕</span>
+      <input type="text" placeholder="Buscar...">
+    </div>
+
+    <button class="notification-button" aria-label="Notificaciones">
+      ♧
+      <span class="notification-dot"></span>
+    </button>
+
+    <a routerLink="/perfil" class="user-profile">
+      <div class="avatar">JS</div>
+      <div class="user-info">
+        <strong>Juan Sebastián</strong>
+        <small>Administrador</small>
+      </div>
+    </a>
+
+  </div>
+
+</header>

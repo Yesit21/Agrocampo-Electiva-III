@@ -1,0 +1,120 @@
+:host {
+  display: block;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #247746;
+  color: white;
+  padding: 25px 15px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 10px 30px;
+}
+
+.brand-icon {
+  font-size: 32px;
+}
+
+.brand h2 {
+  font-size: 19px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.brand span {
+  font-size: 12px;
+  color: #d4eadb;
+}
+
+.menu-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #c4dfcd;
+  letter-spacing: 1px;
+  padding: 12px 12px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 12px;
+  border-radius: 8px;
+  color: #e8f3eb;
+  text-decoration: none;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.menu a:hover {
+  background: #348956;
+}
+
+.menu a.active {
+  background: #ffffff;
+  color: #247746;
+  font-weight: 700;
+}
+
+.menu-icon {
+  width: 22px;
+  text-align: center;
+  font-size: 17px;
+}
+
+.account-label {
+  margin-top: 20px;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 18px 10px 5px;
+  border-top: 1px solid #ffffff35;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-icon {
+  font-size: 25px;
+}
+
+.sidebar-footer strong,
+.sidebar-footer small {
+  display: block;
+}
+
+.sidebar-footer strong {
+  font-size: 13px;
+}
+
+.sidebar-footer small {
+  color: #d4eadb;
+  font-size: 11px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
