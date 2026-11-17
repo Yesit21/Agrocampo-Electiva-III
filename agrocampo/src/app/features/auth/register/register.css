@@ -1,0 +1,217 @@
+
+:host {
+  display: block;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #263a2d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.auth-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* IMAGEN REGISTRO */
+
+.auth-image-panel {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 35px;
+
+  background-image:
+    linear-gradient(rgba(20, 65, 38, 0.35), rgba(20, 65, 38, 0.55)),
+    url('/images/register.jpg');
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.image-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  color: white;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+/* FORMULARIO */
+
+.auth-form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  height: 100vh;
+  padding: 30px 35px;
+  background: white;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+}
+
+.auth-form-wrapper {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  animation: aparecer 0.5s ease;
+}
+
+.auth-heading {
+  margin-bottom: 24px;
+}
+
+.auth-heading h1 {
+  margin: 0 0 10px;
+  color: #20372a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.auth-heading p {
+  margin: 0;
+  color: #78847b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* CAMPOS */
+
+.auth-field {
+  margin-bottom: 16px;
+}
+
+.auth-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #34473a;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.auth-field input {
+  display: block;
+  width: 100%;
+  height: 46px;
+  padding: 0 14px;
+  border: 1px solid #dce6de;
+  border-radius: 8px;
+  outline: none;
+  background: #fbfdfb;
+  color: #263a2d;
+  font-family: inherit;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.auth-field input:focus {
+  border-color: #398653;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(57, 134, 83, 0.12);
+}
+
+.auth-field input::placeholder {
+  color: #a4ada6;
+}
+
+/* BOTÓN */
+
+.auth-button {
+  width: 100%;
+  height: 48px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #287447;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.auth-button:hover:not(:disabled) {
+  background: #1d5c36;
+  transform: translateY(-2px);
+}
+
+.auth-button:disabled {
+  background: #a8b8ac;
+  cursor: not-allowed;
+}
+
+/* ENLACE */
+
+.auth-switch {
+  margin-top: 22px;
+  color: #778078;
+  font-size: 13px;
+  text-align: center;
+}
+
+.auth-switch a {
+  color: #287447;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* ANIMACIÓN */
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 760px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-image-panel {
+    display: none;
+  }
+
+  .auth-form-section {
+    height: 100vh;
+    padding: 30px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-heading h1 {
+    font-size: 27px;
+  }
+
+  .auth-field input {
+    height: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auth-form-wrapper {
+    animation: none;
+  }
+}

@@ -1,1 +1,75 @@
-<p>profile works!</p>
+<div class="page-container">
+
+  <div class="page-heading">
+    <div>
+      <h1>Perfil y configuración</h1>
+      <p>Administra tu información personal y preferencias.</p>
+    </div>
+  </div>
+
+  <section class="content-card">
+    <div class="profile-header">
+      <div class="profile-avatar">JS</div>
+      <div>
+        <h3>{{ nombre }} {{ apellido }}</h3>
+        <p>Administrador de AgroCampo</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-card">
+    <h3>Información personal</h3>
+
+    <div class="form-group">
+      <label>Nombre</label>
+      <input class="form-control" [(ngModel)]="nombre">
+    </div>
+
+    <div class="form-group">
+      <label>Apellido</label>
+      <input class="form-control" [(ngModel)]="apellido">
+    </div>
+
+    <div class="form-group">
+      <label>Correo electrónico</label>
+      <input class="form-control" type="email" [(ngModel)]="correo">
+    </div>
+
+    <div class="form-group">
+      <label>Teléfono</label>
+      <input class="form-control" type="tel" [(ngModel)]="telefono">
+    </div>
+
+    <button class="primary-button" (click)="guardarCambios()">
+      Guardar cambios
+    </button>
+  </section>
+
+  <section class="content-card">
+    <h3>Preferencias de notificaciones</h3>
+
+    <label class="preference">
+      <input type="checkbox" checked>
+      Recibir alertas sobre enfermedades
+    </label>
+
+    <label class="preference">
+      <input type="checkbox" checked>
+      Recibir recordatorios de revisión
+    </label>
+
+    <label class="preference">
+      <input type="checkbox">
+      Recibir novedades del sistema
+    </label>
+  </section>
+
+  <section class="content-card">
+    <h3>Seguridad de la cuenta</h3>
+    <p>La opción para cambiar la contraseña se conectará cuando implementemos la autenticación.</p>
+    <button class="primary-button" disabled>
+      Cambiar contraseña
+    </button>
+  </section>
+
+</div>

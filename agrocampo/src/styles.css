@@ -1,1 +1,179 @@
-/* You can add global styles to this file, and also import other style files */
+/* Estilos generales de las vistas AgroCampo */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+.page-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.page-heading h1 {
+  color: #26382c;
+  font-size: 25px;
+  margin: 0 0 7px;
+}
+
+.page-heading p {
+  color: #7c887f;
+  font-size: 14px;
+  margin: 0;
+}
+
+.primary-button {
+  background: #247746;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  padding: 11px 17px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary-button:hover {
+  background: #195e35;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.stat-card,
+.content-card {
+  background: white;
+  border: 1px solid #e8ece8;
+  border-radius: 10px;
+  padding: 22px;
+}
+
+.stat-card span {
+  color: #7c887f;
+  font-size: 13px;
+}
+
+.stat-card h2 {
+  color: #247746;
+  font-size: 27px;
+  margin: 12px 0 5px;
+}
+
+.stat-card small {
+  color: #849087;
+}
+
+.content-card {
+  margin-bottom: 22px;
+}
+
+.content-card h3 {
+  color: #34463a;
+  font-size: 16px;
+  margin: 0 0 18px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.data-table th,
+.data-table td {
+  text-align: left;
+  padding: 14px 12px;
+  border-bottom: 1px solid #edf0ed;
+  font-size: 13px;
+}
+
+.data-table th {
+  color: #718077;
+  background: #f8faf8;
+}
+
+.data-table td {
+  color: #405047;
+}
+
+.status {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.status.good {
+  color: #247746;
+  background: #e4f4e8;
+}
+
+.status.warning {
+  color: #a36a12;
+  background: #fff3d9;
+}
+
+.status.danger {
+  color: #bd4545;
+  background: #fde9e7;
+}
+
+.form-control {
+  width: 100%;
+  border: 1px solid #dce5de;
+  border-radius: 7px;
+  padding: 11px;
+  margin-top: 7px;
+  outline: none;
+  background: white;
+}
+
+.form-control:focus {
+  border-color: #247746;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  color: #405047;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-heading h1 {
+    font-size: 21px;
+  }
+}

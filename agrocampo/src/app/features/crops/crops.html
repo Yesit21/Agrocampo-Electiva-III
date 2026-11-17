@@ -1,1 +1,99 @@
-<p>crops works!</p>
+<div class="page-container">
+
+  <div class="page-heading">
+    <div>
+      <h1>Mis cultivos</h1>
+      <p>Administra y consulta la información de tus cultivos registrados.</p>
+    </div>
+    <button class="primary-button" (click)="mostrarFormulario = !mostrarFormulario">
+      + Agregar cultivo
+    </button>
+  </div>
+
+  @if (mostrarFormulario) {
+    <section class="content-card">
+      <h3>Registrar nuevo cultivo</h3>
+
+      <div class="form-group">
+        <label>Nombre del cultivo</label>
+        <input class="form-control" [(ngModel)]="nuevoNombre" placeholder="Ej. Cultivo de café">
+      </div>
+
+      <div class="form-group">
+        <label>Tipo de planta</label>
+        <select class="form-control" [(ngModel)]="nuevoTipo">
+          <option value="">Seleccionar tipo</option>
+          <option>Café</option>
+          <option>Papa</option>
+          <option>Maíz</option>
+          <option>Tomate</option>
+          <option>Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Ubicación</label>
+        <input class="form-control" [(ngModel)]="nuevaUbicacion" placeholder="Ubicación del cultivo">
+      </div>
+
+      <button class="primary-button" (click)="agregarCultivo()">Guardar cultivo</button>
+    </section>
+  }
+
+  <section class="stats-grid">
+    <article class="stat-card">
+      <span>Total de cultivos</span>
+      <h2>{{ cultivos.length }}</h2>
+      <small>Cultivos registrados</small>
+    </article>
+    <article class="stat-card">
+      <span>En buen estado</span>
+      <h2>{{ cultivos.length }}</h2>
+      <small>Datos de demostración</small>
+    </article>
+    <article class="stat-card">
+      <span>Tipos registrados</span>
+      <h2>4</h2>
+      <small>Diferentes variedades</small>
+    </article>
+  </section>
+
+  <section class="content-card">
+    <h3>Listado de cultivos</h3>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>Ubicación</th>
+            <th>Estado</th>
+            <th>Acción</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          @for (cultivo of cultivos; track cultivo.id) {
+            <tr>
+              <td>{{ cultivo.nombre }}</td>
+              <td>{{ cultivo.tipo }}</td>
+              <td>{{ cultivo.ubicacion }}</td>
+              <td><span class="status good">Saludable</span></td>
+              <td>
+                <button class="primary-button" (click)="eliminarCultivo(cultivo.id)">
+                  Eliminar
+                </button>
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="5">Todavía no tienes cultivos registrados.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</div>

@@ -1,0 +1,32 @@
+.image-preview {
+  margin: 20px 0;
+}
+
+.image-preview img {
+  width: 100%;
+  max-width: 350px;
+  max-height: 300px;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  background: #f5f7f5;
+}
+
+.image-preview p {
+  color: #718077;
+  font-size: 12px;
+}
+
+.upload-placeholder {
+  padding: 35px;
+  margin: 20px 0;
+  border: 2px dashed #cbd9ce;
+  border-radius: 10px;
+  text-align: center;
+  background: #f8faf8;
+  color: #718077;
+}
+
+.upload-placeholder span {
+  font-size: 35px;
+}

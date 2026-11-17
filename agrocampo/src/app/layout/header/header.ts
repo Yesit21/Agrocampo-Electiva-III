@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,5 +9,16 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.css'
 })
 export class Header {
+  perfilMenuAbierto = false;
 
+  constructor(private readonly router: Router) {}
+
+  alternarMenuPerfil(): void {
+    this.perfilMenuAbierto = !this.perfilMenuAbierto;
+  }
+
+  cerrarSesion(): void {
+    this.perfilMenuAbierto = false;
+    void this.router.navigateByUrl('/login');
+  }
 }

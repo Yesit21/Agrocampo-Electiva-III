@@ -17,13 +17,38 @@
       <span class="notification-dot"></span>
     </button>
 
-    <a routerLink="/perfil" class="user-profile">
-      <div class="avatar">JS</div>
-      <div class="user-info">
-        <strong>Juan Sebastián</strong>
-        <small>Administrador</small>
-      </div>
-    </a>
+    <div class="profile-menu">
+      <button
+        type="button"
+        class="user-profile"
+        aria-label="Abrir menú de perfil"
+        aria-haspopup="menu"
+        [attr.aria-expanded]="perfilMenuAbierto"
+        (click)="alternarMenuPerfil()">
+        <span class="avatar">JS</span>
+        <span class="user-info">
+          <strong>Juan Sebastián</strong>
+          <small>Administrador</small>
+        </span>
+      </button>
+
+      @if (perfilMenuAbierto) {
+        <div class="profile-dropdown" role="menu">
+          <a
+            routerLink="/perfil"
+            role="menuitem"
+            (click)="perfilMenuAbierto = false">
+            Ver perfil
+          </a>
+          <button
+            type="button"
+            role="menuitem"
+            (click)="cerrarSesion()">
+            Cerrar sesión
+          </button>
+        </div>
+      }
+    </div>
 
   </div>
 
