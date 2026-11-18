@@ -26,6 +26,33 @@
   margin: 0;
 }
 
+/* Preferencias */
+.preference {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  margin: 8px 0;
+  border-radius: 8px;
+  background: #f8fbf8;
+  border: 1px solid #e8efe8;
+  color: #3a4f42;
+  font-size: 13px;
+  transition: background 0.18s ease, border-color 0.18s ease;
+  cursor: pointer;
+}
+
+.preference:hover {
+  background: #f0faf3;
+  border-color: #c8e0ce;
+}
+
+.preference input[type="checkbox"] {
+  accent-color: #247746;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
 .preference {
   display: flex;
   align-items: center;

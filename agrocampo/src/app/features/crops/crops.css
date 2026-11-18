@@ -1,0 +1,57 @@
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Formulario de nuevo cultivo */
+.content-card .primary-button {
+  background: linear-gradient(135deg, #2a8050 0%, #1f6640 100%);
+  box-shadow: 0 3px 12px rgba(36, 119, 70, 0.22);
+  border-radius: 10px;
+  padding: 11px 20px;
+}
+
+.content-card .primary-button:hover {
+  opacity: 0.90;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(36, 119, 70, 0.28);
+}
+
+/* Botón eliminar en tabla */
+.data-table .primary-button {
+  background: transparent;
+  color: #c0392b;
+  border: 1.5px solid #e8c4c0;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.data-table .primary-button:hover {
+  background: #fff0ee;
+  border-color: #c0392b;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Stat card de cultivos */
+.stats-grid .stat-card:nth-child(1) {
+  border-top: 3px solid #247746;
+}
+
+.stats-grid .stat-card:nth-child(2) {
+  border-top: 3px solid #27ae60;
+}
+
+.stats-grid .stat-card:nth-child(3) {
+  border-top: 3px solid #2e86c1;
+}
+
+.stats-grid .stat-card:nth-child(2) h2 {
+  color: #27ae60;
+}
+
+.stats-grid .stat-card:nth-child(3) h2 {
+  color: #2e86c1;
+}
