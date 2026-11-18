@@ -1,0 +1,147 @@
+:host {
+  display: block;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #247746 0%, #1b5f38 100%);
+  color: white;
+  padding: 25px 15px 15px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  box-sizing: border-box;
+  box-shadow: 4px 0 18px rgba(18, 54, 30, 0.12);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 10px 30px;
+}
+
+.brand-icon {
+  font-size: 32px;
+  transform: translateY(-2px);
+}
+
+.brand h2 {
+  font-size: 19px;
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.brand span {
+  font-size: 12px;
+  color: #d4eadb;
+}
+
+.menu-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #c4dfcd;
+  letter-spacing: 1px;
+  padding: 12px 12px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 12px;
+  border-radius: 10px;
+  color: #e8f3eb;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu a > span:last-child {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menu a:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.menu a.active {
+  background: #ffffff;
+  color: #247746;
+  font-weight: 700;
+  box-shadow: 0 8px 18px rgba(17, 61, 33, 0.12);
+  transform: none;
+}
+
+.menu a.active .menu-icon {
+  transform: none;
+}
+
+.menu-icon {
+  width: 22px;
+  flex-shrink: 0;
+  text-align: center;
+  font-size: 17px;
+  transition: transform 0.2s ease;
+}
+
+.account-label {
+  margin-top: 20px;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 18px 10px 5px;
+  border-top: 1px solid #ffffff35;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-icon {
+  font-size: 25px;
+}
+
+.sidebar-footer strong,
+.sidebar-footer small {
+  display: block;
+}
+
+.sidebar-footer strong {
+  font-size: 13px;
+}
+
+.sidebar-footer small {
+  color: #d4eadb;
+  font-size: 11px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
