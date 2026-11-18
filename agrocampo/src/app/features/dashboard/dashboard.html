@@ -1,0 +1,91 @@
+
+<div class="page-container">
+
+  <div class="page-heading">
+    <div>
+      <h1>Dashboard</h1>
+      <p>Resumen general del estado de tus cultivos.</p>
+    </div>
+    <button class="primary-button" routerLink="/analizar">
+      + Analizar planta
+    </button>
+  </div>
+
+  <section class="stats-grid">
+
+    <article class="stat-card">
+      <span>🌱 Cultivos registrados</span>
+      <h2>{{ cultivosRegistrados() }}</h2>
+      <small>4 tipos de cultivos diferentes</small>
+    </article>
+
+    <article class="stat-card">
+      <span>📷 Plantas analizadas</span>
+      <h2>{{ plantasAnalizadas() }}</h2>
+      <small>Durante el seguimiento registrado</small>
+    </article>
+
+    <article class="stat-card">
+      <span>⚠ Enfermedades detectadas</span>
+      <h2>{{ enfermedadesDetectadas() }}</h2>
+      <small>Requieren seguimiento</small>
+    </article>
+
+  </section>
+
+  <section class="content-card">
+    <h3>Actividad reciente</h3>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Actividad</th>
+            <th>Cultivo</th>
+            <th>Fecha</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Análisis de planta</td>
+            <td>Café</td>
+            <td>12/11/2026</td>
+            <td><span class="status warning">Revisar</span></td>
+          </tr>
+          <tr>
+            <td>Registro de cultivo</td>
+            <td>Papa</td>
+            <td>11/11/2026</td>
+            <td><span class="status good">Completado</span></td>
+          </tr>
+          <tr>
+            <td>Análisis de planta</td>
+            <td>Maíz</td>
+            <td>10/11/2026</td>
+            <td><span class="status good">Sin alertas</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="content-card">
+    <h3>Estado general: {{ estadoCultivos() }}</h3>
+
+    @if (enfermedadesDetectadas() > 0) {
+      <p>⚠ Se detectaron enfermedades que requieren seguimiento.</p>
+    } @else {
+      <p>🌱 No hay enfermedades detectadas actualmente.</p>
+    }
+
+    <p>🌱 Realizar seguimiento al cultivo de papa registrado recientemente.</p>
+    <p>💧 Verificar las condiciones de humedad de los cultivos.</p>
+
+    <button class="primary-button" routerLink="/alertas">
+      Ver todas las alertas
+    </button>
+  </section>
+
+</div>

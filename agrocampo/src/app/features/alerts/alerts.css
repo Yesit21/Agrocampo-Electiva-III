@@ -1,0 +1,25 @@
+.alert-item {
+  padding: 12px 0;
+}
+
+.alert-item h4 {
+  color: #34463a;
+  font-size: 14px;
+  margin: 12px 0 6px;
+}
+
+.alert-item p {
+  color: #718077;
+  font-size: 13px;
+}
+
+.alert-item small {
+  color: #9aa49d;
+  font-size: 11px;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #edf0ed;
+  margin: 12px 0;
+}
