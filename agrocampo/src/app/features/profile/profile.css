@@ -1,41 +1,27 @@
-:host {
-  display: block;
-  font-family: 'Inter', sans-serif;
-}
-
-/* Cabecera del perfil */
 .profile-header {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 6px 0 20px;
-  border-bottom: 1px solid #eaefea;
-  margin-bottom: 8px;
+  gap: 18px;
 }
 
 .profile-avatar {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #2a8050 0%, #1f6640 100%);
-  color: #ffffff;
+  width: 65px;
+  height: 65px;
+  background: #e1f1e5;
+  color: #247746;
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 800;
-  flex-shrink: 0;
-  box-shadow: 0 4px 14px rgba(36, 119, 70, 0.28);
 }
 
 .profile-header h3 {
-  margin: 0 0 4px;
-  font-size: 17px;
-  font-weight: 700;
-  color: #1e3528;
+  margin: 0 0 5px;
 }
 
 .profile-header p {
-  color: #8a9690;
+  color: #849087;
   font-size: 13px;
   margin: 0;
 }
@@ -66,4 +52,16 @@
   width: 16px;
   height: 16px;
   cursor: pointer;
+}
+.preference {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+  color: #526057;
+  font-size: 13px;
+}
+
+.preference input {
+  accent-color: #247746;
 }

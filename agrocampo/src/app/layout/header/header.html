@@ -1,0 +1,55 @@
+<header class="header">
+
+  <div class="header-left">
+    <h2>Panel de administración</h2>
+    <p>Bienvenido a AgroCampo</p>
+  </div>
+
+  <div class="header-right">
+
+    <div class="search-box">
+      <span>⌕</span>
+      <input type="text" placeholder="Buscar...">
+    </div>
+
+    <button class="notification-button" aria-label="Notificaciones">
+      ♧
+      <span class="notification-dot"></span>
+    </button>
+
+    <div class="profile-menu">
+      <button
+        type="button"
+        class="user-profile"
+        aria-label="Abrir menú de perfil"
+        aria-haspopup="menu"
+        [attr.aria-expanded]="perfilMenuAbierto"
+        (click)="alternarMenuPerfil()">
+        <span class="avatar">JS</span>
+        <span class="user-info">
+          <strong>Juan Sebastián</strong>
+          <small>Administrador</small>
+        </span>
+      </button>
+
+      @if (perfilMenuAbierto) {
+        <div class="profile-dropdown" role="menu">
+          <a
+            routerLink="/perfil"
+            role="menuitem"
+            (click)="perfilMenuAbierto = false">
+            Ver perfil
+          </a>
+          <button
+            type="button"
+            role="menuitem"
+            (click)="cerrarSesion()">
+            Cerrar sesión
+          </button>
+        </div>
+      }
+    </div>
+
+  </div>
+
+</header>

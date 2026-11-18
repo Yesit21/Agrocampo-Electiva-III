@@ -1,0 +1,66 @@
+<div class="page-container">
+
+  <div class="page-heading">
+    <div>
+      <h1>Analizar planta</h1>
+      <p>Selecciona una fotografía para preparar el diagnóstico de tu planta.</p>
+    </div>
+  </div>
+
+  <section class="content-card">
+    <h3>Información del análisis</h3>
+
+    <div class="form-group">
+      <label>Tipo de planta</label>
+      <select class="form-control" [(ngModel)]="tipoPlanta">
+        <option value="">Seleccionar cultivo</option>
+        <option value="Café">Café</option>
+        <option value="Papa">Papa</option>
+        <option value="Maíz">Maíz</option>
+        <option value="Tomate">Tomate</option>
+        <option value="Otro">Otro</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Fotografía de la planta</label>
+      <input
+        class="form-control"
+        type="file"
+        accept="image/*"
+        (change)="seleccionarImagen($event)"
+      >
+    </div>
+
+    @if (imagenSeleccionada) {
+      <div class="image-preview">
+        <img [src]="imagenSeleccionada" alt="Fotografía seleccionada de la planta">
+        <p>{{ nombreImagen }}</p>
+      </div>
+    } @else {
+      <div class="upload-placeholder">
+        <span>📷</span>
+        <p>Selecciona una imagen para visualizarla aquí.</p>
+      </div>
+    }
+
+    <button class="primary-button" (click)="analizarPlanta()">
+      Iniciar análisis
+    </button>
+
+  </section>
+
+  @if (mostrarResultado) {
+    <section class="content-card">
+      <h3>Resultado de demostración</h3>
+
+      <span class="status warning">Análisis simulado</span>
+
+      <p><strong>Planta seleccionada:</strong> {{ tipoPlanta }}</p>
+      <p><strong>Resultado:</strong> No se ha conectado todavía un modelo de diagnóstico.</p>
+      <p>Esta sección mostrará la enfermedad detectada, nivel de gravedad,
+        síntomas y recomendaciones cuando integremos el servicio de análisis.</p>
+    </section>
+  }
+
+</div>

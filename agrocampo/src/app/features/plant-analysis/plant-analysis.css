@@ -10,63 +10,29 @@
 
 .image-preview img {
   width: 100%;
-  max-width: 380px;
+  max-width: 350px;
   max-height: 300px;
   object-fit: contain;
   display: block;
-  border-radius: 12px;
+  border-radius: 10px;
   background: #f5f7f5;
-  box-shadow: 0 4px 16px rgba(30, 60, 40, 0.10);
-  border: 1.5px solid #e4ece6;
 }
 
 .image-preview p {
-  color: #8a9690;
+  color: #718077;
   font-size: 12px;
-  margin-top: 8px;
 }
 
-/* Placeholder de carga */
 .upload-placeholder {
-  padding: 40px 35px;
+  padding: 35px;
   margin: 20px 0;
-  border: 2px dashed #b8d4c0;
-  border-radius: 12px;
+  border: 2px dashed #cbd9ce;
+  border-radius: 10px;
   text-align: center;
-  background: #f6fbf7;
-  color: #7a8f82;
-  transition: border-color 0.2s ease, background 0.2s ease;
-  cursor: pointer;
-}
-
-.upload-placeholder:hover {
-  border-color: #247746;
-  background: #f0faf3;
+  background: #f8faf8;
+  color: #718077;
 }
 
 .upload-placeholder span {
-  font-size: 40px;
-  display: block;
-  margin-bottom: 10px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-}
-
-.upload-placeholder p {
-  font-size: 13px;
-  color: #8a9690;
-  margin: 0;
-}
-
-/* Botón analizar */
-.primary-button {
-  background: linear-gradient(135deg, #2a8050 0%, #1f6640 100%);
-  box-shadow: 0 3px 12px rgba(36, 119, 70, 0.25);
-  border-radius: 10px;
-  padding: 12px 24px;
-}
-
-.primary-button:hover {
-  opacity: 0.90;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(36, 119, 70, 0.30);
+  font-size: 35px;
 }
