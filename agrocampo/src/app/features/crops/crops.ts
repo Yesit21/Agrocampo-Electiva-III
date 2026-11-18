@@ -1,5 +1,7 @@
+
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CropCard } from './crop-card/crop-card';
 
 interface Cultivo {
   id: number;
@@ -11,7 +13,7 @@ interface Cultivo {
 @Component({
   selector: 'app-crops',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, CropCard],
   templateUrl: './crops.html',
   styleUrl: './crops.css'
 })
@@ -29,16 +31,16 @@ export class Crops {
   ];
 
   agregarCultivo(): void {
-    if (!this.nuevoNombre || !this.nuevoTipo || !this.nuevaUbicacion) {
+    if (!this.nuevoNombre.trim() || !this.nuevoTipo || !this.nuevaUbicacion.trim()) {
       alert('Completa todos los campos.');
       return;
     }
 
     this.cultivos.push({
       id: Date.now(),
-      nombre: this.nuevoNombre,
+      nombre: this.nuevoNombre.trim(),
       tipo: this.nuevoTipo,
-      ubicacion: this.nuevaUbicacion
+      ubicacion: this.nuevaUbicacion.trim()
     });
 
     this.nuevoNombre = '';

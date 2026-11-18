@@ -1,3 +1,4 @@
+
 <div class="page-container">
 
   <div class="page-heading">
@@ -14,19 +15,19 @@
 
     <article class="stat-card">
       <span>🌱 Cultivos registrados</span>
-      <h2>12</h2>
+      <h2>{{ cultivosRegistrados() }}</h2>
       <small>4 tipos de cultivos diferentes</small>
     </article>
 
     <article class="stat-card">
       <span>📷 Plantas analizadas</span>
-      <h2>85</h2>
+      <h2>{{ plantasAnalizadas() }}</h2>
       <small>Durante el seguimiento registrado</small>
     </article>
 
     <article class="stat-card">
       <span>⚠ Enfermedades detectadas</span>
-      <h2>8</h2>
+      <h2>{{ enfermedadesDetectadas() }}</h2>
       <small>Requieren seguimiento</small>
     </article>
 
@@ -71,9 +72,14 @@
   </section>
 
   <section class="content-card">
-    <h3>Alertas y recordatorios</h3>
+    <h3>Estado general: {{ estadoCultivos() }}</h3>
 
-    <p>⚠ Revisar las hojas del cultivo de café por posibles signos de enfermedad.</p>
+    @if (enfermedadesDetectadas() > 0) {
+      <p>⚠ Se detectaron enfermedades que requieren seguimiento.</p>
+    } @else {
+      <p>🌱 No hay enfermedades detectadas actualmente.</p>
+    }
+
     <p>🌱 Realizar seguimiento al cultivo de papa registrado recientemente.</p>
     <p>💧 Verificar las condiciones de humedad de los cultivos.</p>
 
