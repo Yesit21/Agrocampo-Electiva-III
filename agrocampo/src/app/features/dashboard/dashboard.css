@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+/* --- STAT CARDS con colores individuales --- */
+.stats-grid .stat-card:nth-child(1) {
+  border-top: 3px solid #247746;
+}
+
+.stats-grid .stat-card:nth-child(2) {
+  border-top: 3px solid #2e86c1;
+}
+
+.stats-grid .stat-card:nth-child(3) {
+  border-top: 3px solid #e67e22;
+}
+
+.stats-grid .stat-card:nth-child(2) h2 {
+  color: #2e86c1;
+}
+
+.stats-grid .stat-card:nth-child(3) h2 {
+  color: #e67e22;
+}
+
+/* --- TABLA DE ACTIVIDAD RECIENTE --- */
+.data-table tbody tr:hover td {
+  color: #1e3528;
+}
+
+/* --- SECCIÓN DE ALERTAS --- */
+.content-card p {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #f8fbf8;
+  border: 1px solid #e8efe8;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: #344039;
+  line-height: 1.5;
+  transition: background 0.18s ease;
+}
+
+.content-card p:hover {
+  background: #f0faf3;
+  border-color: #c8e0ce;
+}
+
+/* --- BOTÓN ANALIZAR PLANTA en el heading --- */
+.page-heading .primary-button {
+  background: linear-gradient(135deg, #2a8050 0%, #1f6640 100%);
+  box-shadow: 0 3px 12px rgba(36, 119, 70, 0.25);
+  padding: 12px 22px;
+  font-size: 13px;
+  border-radius: 10px;
+}
+
+.page-heading .primary-button:hover {
+  opacity: 0.90;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(36, 119, 70, 0.30);
+}

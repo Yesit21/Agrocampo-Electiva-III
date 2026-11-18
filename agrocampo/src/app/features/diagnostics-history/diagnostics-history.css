@@ -1,0 +1,30 @@
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Stat cards del historial */
+.stats-grid .stat-card:nth-child(1) {
+  border-top: 3px solid #247746;
+}
+
+.stats-grid .stat-card:nth-child(2) {
+  border-top: 3px solid #e67e22;
+}
+
+.stats-grid .stat-card:nth-child(3) {
+  border-top: 3px solid #2e86c1;
+}
+
+.stats-grid .stat-card:nth-child(2) h2 {
+  color: #e67e22;
+}
+
+.stats-grid .stat-card:nth-child(3) h2 {
+  color: #2e86c1;
+}
+
+/* Filas de la tabla con hover */
+.data-table tbody tr:hover td {
+  color: #1e3528;
+}

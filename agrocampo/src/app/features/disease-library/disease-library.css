@@ -1,0 +1,60 @@
+:host {
+  display: block;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Cards de enfermedades */
+.disease-card {
+  border-radius: 12px;
+  border: 1.5px solid #e4ece6;
+  padding: 18px 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(30, 60, 40, 0.06);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.disease-card:hover {
+  box-shadow: 0 6px 20px rgba(30, 60, 40, 0.12);
+  transform: translateY(-2px);
+  border-color: #b8d4c0;
+}
+
+.disease-card h4 {
+  color: #1e3528;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.disease-card p {
+  color: #60706a;
+  font-size: 13px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Badge de severidad */
+.severity-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.severity-badge.alta {
+  background: #fde9e7;
+  color: #bd4545;
+}
+
+.severity-badge.media {
+  background: #fff3d9;
+  color: #a36a12;
+}
+
+.severity-badge.baja {
+  background: #e4f4e8;
+  color: #247746;
+}
