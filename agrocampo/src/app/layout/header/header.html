@@ -20,10 +20,10 @@
         aria-haspopup="menu"
         [attr.aria-expanded]="perfilMenuAbierto"
         (click)="alternarMenuPerfil()">
-        <span class="avatar">JS</span>
+        <span class="avatar">{{ iniciales }}</span>
         <span class="user-info">
-          <strong>Juan Sebastián</strong>
-          <small>Administrador</small>
+          <strong>{{ nombreUsuario }}</strong>
+          <small>{{ rolUsuario }}</small>
         </span>
       </button>
 
